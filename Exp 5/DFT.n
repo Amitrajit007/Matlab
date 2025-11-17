@@ -1,0 +1,8 @@
+N=4 % 4 point dft
+xn= [1 1 2 3];
+xdft = fft(xn,N);
+magofX = abs(xdft);
+phaseofX = angle(xdft);
+xn = ifft(xdft);
+disp(xn);
+stem(xn);
