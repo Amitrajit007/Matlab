@@ -1,0 +1,6 @@
+n=0:99;
+ a=0;
+ b=1;
+ range = rand(1,100);
+ x=a+(b-a)*range;
+ stem(n,x);
