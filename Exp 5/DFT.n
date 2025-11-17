@@ -1,8 +1,25 @@
 N=4 % 4 point dft
 xn= [1 1 2 3];
-xdft = fft(xn,N);
-magofX = abs(xdft);
-phaseofX = angle(xdft);
-xn = ifft(xdft);
-disp(xn);
+xk=fft(xn);
+mag = abs(xk);
+phase = angle(xk);
+
+xn1 = ifft(xk);
+% display
+
+subplot(2,2,1);
 stem(xn);
+title("real");
+
+subplot(2,2,2);
+stem(mag);
+title("magnitude");
+
+subplot(2,2,3);
+stem(phase);
+title("phase");
+
+subplot(2,2,4);
+stem(xn1);
+title("ifft");
+
